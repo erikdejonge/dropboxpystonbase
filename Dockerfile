@@ -12,7 +12,7 @@ RUN     tar xf gcc-4.8.2.tar.bz2
 RUN     mkdir gcc-4.8.2-{build,install}
 WORKDIR gcc-4.8.2-build
 RUN     ../gcc-4.8.2/configure --prefix=$HOME/pyston_deps/gcc-4.8.2-install
-ENV     LIBRARY_PATH=/usr/lib32
+ENV     LIBRARY_PATH /usr/lib32
 RUN     make -j4
 RUN     make check
 RUN     make install
